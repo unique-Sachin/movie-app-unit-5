@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 
-const index = ({ data }) => {
+const Movies = ({ data }) => {
   return (
     <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)" }}>
       <Head>
@@ -35,4 +35,4 @@ export async function getServerSideProps() {
   };
 }
 
-export default index;
+export default Movies;

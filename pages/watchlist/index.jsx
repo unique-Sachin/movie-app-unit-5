@@ -3,7 +3,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import React from "react";
 
-const index = ({ watchlist }) => {
+const Watchlist = ({ watchlist }) => {
   const router = useRouter();
   const handleRemove = async (id) => {
     await axios
@@ -47,4 +47,4 @@ export async function getServerSideProps() {
   };
 }
 
-export default index;
+export default Watchlist;
