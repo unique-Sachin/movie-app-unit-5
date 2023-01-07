@@ -1,5 +1,6 @@
 import axios from "axios";
 import Head from "next/head";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
 
@@ -23,9 +24,9 @@ const Page = ({ data }) => {
       </Head>
       <h1 style={{ fontSize: "50px" }}>{data.Title}</h1>
       <div style={{ display: "flex" }}>
-        <img height={"300px"} width={"400px"} src={data.Images[0]} alt="alt" />
-        <img height={"300px"} width={"400px"} src={data.Images[1]} alt="alt" />
-        <img height={"300px"} width={"400px"} src={data.Images[2]} alt="alt" />
+        <Image height="200" width="300" src={data.Images[0]} alt="alt" />
+        <Image height="200" width="300" src={data.Images[1]} alt="alt" />
+        <Image height="200" width="300" src={data.Images[2]} alt="alt" />
       </div>
 
       <button onClick={handleAddtoWatchList} style={{ fontSize: "30px" }}>

@@ -1,5 +1,6 @@
 import axios from "axios";
 import Head from "next/head";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
 
@@ -18,12 +19,7 @@ const Watchlist = ({ watchlist }) => {
       {watchlist.map((el) => (
         <div key={el.id} href={`/movies/${el.id}`}>
           <div style={{ textAlign: "center" }}>
-            <img
-              height={"200px"}
-              width={"300px"}
-              src={el.Images[0]}
-              alt="alt"
-            />
+            <Image height="200" width="300" src={el.Images[0]} alt="alt" />
             <h2>{el.Title}</h2>
             <button
               onClick={() => handleRemove(el.id)}

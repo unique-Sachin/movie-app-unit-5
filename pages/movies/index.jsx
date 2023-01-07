@@ -1,5 +1,6 @@
 import axios from "axios";
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -12,9 +13,9 @@ const Movies = ({ data }) => {
       {data.map((el) => (
         <Link key={el.id} href={`/movies/${el.id}`}>
           <div>
-            <img
-              height={"200px"}
-              width={"300px"}
+            <Image
+              height="200"
+              width="300"
               src={el.Images[0]}
               alt="alt"
             />
